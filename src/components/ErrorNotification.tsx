@@ -11,7 +11,7 @@ export const ErrorNotification: React.FC = () => {
     if (errorMessage) {
       setTimeout(() => dispatch({ type: 'showError', payload: null }), 3000);
     }
-  });
+  }, [errorMessage, dispatch]);
 
   return (
     <div
